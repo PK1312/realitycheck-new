@@ -68,6 +68,21 @@ jobs:
   # vm jobs
   machine:
     machine: true
+    resource_class: medium
+    steps:
+      - run:
+          <<: *basic_docker_build
+      - run: |
+          echo $SLEEP
+          date
+          sleep $SLEEP
+          date
+          echo 'Done sleeping.'
+    environment:
+      SLEEP: 1
+
+  machine2xlarge:
+    machine: true
     resource_class: 2xlarge
     steps:
       - run:
@@ -209,6 +224,7 @@ workflows:
       - medium+
       - large
       - xlarge
+      - 2xlarge
 
   vm_jobs:
     jobs:
