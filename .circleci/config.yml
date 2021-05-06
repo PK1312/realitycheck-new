@@ -65,7 +65,7 @@ jobs:
   # vm jobs
   machine:
     machine: true
-    resource_class: 2xlarge
+    resource_class: medium
     steps:
       - run:
           <<: *basic_docker_build
