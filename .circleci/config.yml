@@ -232,6 +232,7 @@ workflows:
       - remote_docker
       - docker_layer_caching
       - machine_dlc
+      - machine2xlarge
 
   feature_jobs:
     jobs:
