@@ -50,10 +50,6 @@ jobs:
     <<: *resource_job_defaults
     resource_class: medium
 
-  medium+: # 3 vCPUs, 6GB RAM
-    <<: *resource_job_defaults
-    resource_class: medium+
-
   large: # 4 vCPUs, 8GB RAM
     <<: *resource_job_defaults
     resource_class: large
