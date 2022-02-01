@@ -1,5 +1,7 @@
 # realitycheck test
 
+Hello world!
+
 ## Summary
 A sample app that validates some basic CircleCI features in three parallel workflows.
 
