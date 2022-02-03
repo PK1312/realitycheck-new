@@ -57,6 +57,13 @@ jobs:
   xlarge: # 8 vCPUs, 16GB RAM
     <<: *resource_job_defaults
     resource_class: xlarge
+    
+  runner:
+    machine: true
+    resource_class: grant-demo/runner1
+    steps:
+      -run:
+         <<: *resource_job_defaults
 
   # vm jobs
   machine:
@@ -216,6 +223,7 @@ workflows:
       - medium
       - large
       - xlarge
+      - runner
       
   vm_jobs:
     jobs:
