@@ -60,7 +60,7 @@ jobs:
     
   runner:
     machine: true
-    resource_class: pk1312/m1
+    resource_class: grant-demo/runner1
     steps:
       - run:
           <<: *basic_docker_build
