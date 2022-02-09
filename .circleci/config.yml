@@ -62,16 +62,7 @@ jobs:
     machine: true
     resource_class: grant-demo/runner1
     steps:
-      - run:
-          <<: *basic_docker_build
-      - run: |
-          echo $SLEEP
-          date
-          sleep $SLEEP
-          date
-          echo 'Done sleeping.'
-    environment:
-      SLEEP: 1
+      - run: echo "Hi I'm on Runners!"
 
   # vm jobs
   machine:
